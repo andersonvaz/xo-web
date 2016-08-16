@@ -209,7 +209,7 @@ export const getXoaPlan = plan => {
 export const mapPlus = (collection, cb) => {
   const result = []
   const push = ::result.push
-  forEach(collection, value => cb(value, push))
+  forEach(collection, (value, key) => cb(value, push, key))
   return result
 }
 
